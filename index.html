@@ -6,6 +6,13 @@
 	<title>煤球网</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script>
+		(function(){
+			var  html = document.documentElement;
+			var htmlWidth = html.getBoundingClientRect().width;
+			html.style.fontSize = htmlWidth/15 +'px';
+		})()
+	</script>
 </head>
 <body>
 	<!-- 左边信息栏开始 -->
@@ -123,13 +130,7 @@
       }
 	});
 </script>
-	<script>
-		(function(){
-			var  html = document.documentElement;
-			var htmlWidth = html.getBoundingClientRect().width;
-			html.style.fontSize = htmlWidth/15 +'px';
-		})()
-</script>
+
 </body>
 
 </html>
