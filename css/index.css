@@ -1,5 +1,6 @@
    html,body{
    	height:100%;
+   	background:#f2f2f2;
    }
 #left-bar{
   		position:fixed;
@@ -42,16 +43,19 @@
 	color:#FFFFFF;
 	font-weight:bold;
 	font-size: 0.141rem;
-	border:1px solid rgba(74,80,84,0.7);
+/*	border:1px solid rgba(74,80,84,0.7);*/
     line-height:0.274rem;
 }
 .needGroup{
-	line-height:0.220rem;
+	line-height:0.250rem;
 	padding-left:0.391rem;
 	color:#cccccc;
 	font-size: 0.125rem;
-	border:1px solid rgba(74,80,84,0.7);
 	cursor: pointer;
+	transition: background 0.8s;
+}
+.needGroup:hover{
+	background:#787d80;
 }
 #need2{
 	cursor: pointer;
@@ -83,15 +87,11 @@
 	width:1.797rem;
 	height:0.302rem;
 }
-
-
-
-#middle-bar{
+#middle-show{
 	position:absolute;
 	left:2.664rem;
-	top:0;
+	top:0.490rem;
 	width:8.759rem;
-    background:#f2f2f2;
 }
 #middle-headline{
 	width:8.422rem;
@@ -99,12 +99,14 @@
 	background:#f2f2f2;
 	font-size:0.177rem;
 	font-weight:bold;
-	padding-left:0.320rem;
-	border:1px solid #a9a9a9;
 	line-height:0.480rem;
+	position:fixed;
+	top:0px;
+    left:2.809rem;
+    padding-left:0.280rem;
+    z-index:9999;
 }
 .dataSort{
-	
     font-size:0.177rem;
 	font-weight:bold;
 }
@@ -155,11 +157,12 @@
 #right-state{
 	width:2.109rem;
 	height:1.612rem;
-	border:1px solid #f1f1f1;
-	position:absolute;
+	position:fixed;
 	left:11.431rem;
 }
 #head{
+    width:0.489rem;
+	height:0.489rem;
 	margin:0.096rem 0.094rem 0.096rem 0.414rem;
 }
 #login-state{
@@ -180,7 +183,7 @@
     font-weight:bold;
     cursor: pointer
 }
-#need li:hover{
+.leftNeed:hover{
     background:#787d80;
 }
 .btnGroup:hover{
