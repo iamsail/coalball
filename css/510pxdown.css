@@ -1,0 +1,141 @@
+#left-bar{
+            width:100%;
+            height:7.235rem;
+            z-index:1;
+		}
+		.btnGroup,.dataBody,.img2,#head,#login-state,#middle-headline{
+			display:none;
+		}
+		#middle-bar{
+			 width:100%;
+			 position:absolute;
+			 top:7.235rem;
+		}
+		.data{
+			width:12.108rem;
+			height:2.953rem;
+			margin-top:0.738rem;
+
+		}
+		.img1{
+			width:3.248rem;
+			height:1.949rem;
+			position:absolute;
+			right:0.443rem;
+			padding-top:0.472rem;
+
+
+		}
+		#middle-show{
+			position:absolute;
+			left:0.886rem;
+		}
+		.dataSort,.dataHeadline{
+			font-size:0.443rem;
+			padding-right:0;
+			margin-bottom:0;
+			line-height:0.05rem;
+		}
+		.time{
+			-webkit-text-size-adjust:none;
+            font-size:0.345rem;
+            font-weight: bold;
+		}
+		.timeStart{
+            position: absolute;
+            top:1.919rem;
+            left:0.591rem;
+		}
+		.timeStop{
+			position: absolute;
+            top:1.919rem;
+            left:4.725rem;
+		}
+		.leftData{
+			height:1.749rem;
+			width:7.738rem;
+			margin-left:0.402rem;
+			margin-top:0.243rem;
+			line-height:0.8rem;
+		}
+		#coal{
+			width:6.792rem;
+			height:2.126rem;
+			position: absolute;
+			left:3.751rem;
+			top:1.476rem;
+		}
+		#left-text{
+			height: 1.299rem;
+			width:12.108rem;
+			background-size:1.270rem 0.738rem;
+			position:absolute;
+			left:1.122rem;
+			top:4.430rem;
+			border-radius:0.147rem;
+		}
+		#left-text input{
+			height: 1.299rem;
+			width:10.632rem;
+			font-size:0.738rem;
+			position:absolute;
+			left:1.329rem;
+			top:0px;
+
+		}
+		#need{
+			width:14.766rem;
+			height:1.476rem;
+            position: absolute;
+            left:0px;
+            top:6.202rem;
+            overflow:scroll;
+            /*overflow-x:hidden;*/
+            overflow-y:hidden;
+            white-space:nowrap;
+		}
+		 #need::-webkit-scrollbar {
+            width: 0px;
+            background-color: transparent;
+        }
+		#need li{
+			height:0.561rem;
+            display:inline-block;
+            padding-right:0.236rem;
+            margin-left:0.443rem;
+            font-size:0.443rem; 
+            color:#cccccc;
+            font-weight:normal;
+            margin-left:0.590rem;
+            margin-top: 0.295rem;
+		}
+		#right-state{
+			width:4.430rem;
+			height:0.886rem;
+			position:fixed;
+			top:0.591rem;
+			left:10.632rem;
+			color:gray;
+			z-index:1;
+		}
+		.btnGroup1{
+			background:#222a2e;
+			display:inline;
+			font-size:0.443rem;
+			font-weight: normal;
+			margin-left:0.591rem;
+		}
+		#box{
+			width:1.240rem;
+			height:0.886rem;
+			position: absolute;
+			background:black;
+            left:13.585rem;
+            top:6.202rem;
+            background: linear-gradient(to right, rgba(34, 42, 46, 0.1), rgba(34, 42, 46, 1));
+            z-index:1;
+		}
+	   #need li:hover{
+    border-bottom: 0.147rem solid white;
+    background:#222a2e;	
+        }
