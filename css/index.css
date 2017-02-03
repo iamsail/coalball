@@ -43,7 +43,6 @@
 	color:#FFFFFF;
 	font-weight:bold;
 	font-size: 0.141rem;
-/*	border:1px solid rgba(74,80,84,0.7);*/
     line-height:0.274rem;
 }
 .needGroup{
@@ -104,7 +103,7 @@
 	top:0px;
     left:2.809rem;
     padding-left:0.280rem;
-    z-index:9999;
+    z-index:1;
 }
 .dataSort{
     font-size:0.177rem;
