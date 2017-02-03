@@ -6,6 +6,24 @@
 	<title>煤球网</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link media="screen and (max-width:510px)" rel="stylesheet" href="css/510pxdown.css" />
+
+	<style type="text/css">
+    @media screen and (min-width:511px) and (max-width:959px){
+
+.dataBody{
+
+	display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+   }
+   #need li{
+   	line-height:20px;
+   }
+    }
+
+	</style>
 	<script>
 		(function(){
 			var  html = document.documentElement;
@@ -21,8 +39,9 @@
 		<div id='left-text'>
 			<input type="text" name="">
 		</div>
+		<div id='box'></div>
 		<ul id='need'>
-		   <li class="leftNeed" >需求分类</li>
+		    <li class="leftNeed" >需求分类</li>
 			<li class='needGroup'>学习</li>
 			<li class='needGroup'>组队/招人</li>
 			<li class='needGroup'>开发/设计/视频制作</li>
@@ -52,6 +71,17 @@
    	  <img class='img img2' src="img/lol2.png">	
    	 </section>
        <section class='data dataSort2'>
+   	  <div class='leftData'>
+   	  	<span class='dataSort'>组队:</span>
+   		<span class='dataHeadline'>找一个参加全国大学生英雄联盟联赛的队友</span>
+   		<p class='dataBody'>要求不多，一区钻石水平以上；熟练掌握各种辅助英雄的玩法；每天能抽出3个小时时间练习，晚上8点到11点是额外的磨合时间；希望有兴趣的朋友们联系我；qq是2315468970；愿我们合作愉快,为矿大争光 !</p>
+   		<span class='time timeStart'>发布时间：2017.1.18</span>
+   		<span class='time timeStop'>截止时间：2017.2.17</span>
+   	  </div>
+   	  <img class='img img1' src="img/lol1.png">
+   	  <img class='img img2' src="img/lol2.png">	
+   	 </section>
+   	  <section class='data dataSort2'>
    	  <div class='leftData'>
    	  	<span class='dataSort'>组队:</span>
    		<span class='dataHeadline'>找一个参加全国大学生英雄联盟联赛的队友</span>
@@ -131,6 +161,10 @@
        $(".data").css('display','block');  
       }
 	});
+	if($("html").width()<=509)
+	{
+         $(".leftNeed:first").text("最近");
+	}
 </script>
 
 </body>
