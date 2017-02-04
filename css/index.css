@@ -211,23 +211,23 @@
 			 top:7.235rem;
 		}
 		.data{
-			width:12.808rem;
-			height:2.953rem;
-			margin-top:0.688rem;
+			width:13.408rem;
+			height:3.153rem;
+			margin-top:0.488rem;
 
 		}
 		.img1{
-			width:3.248rem;
-			height:1.949rem;
+			width:3.848rem;
+			height:2.389rem;
 			position:absolute;
 			right:0.443rem;
-			padding-top:0.472rem;
+			padding-top:0.252rem;
 
 
 		}
 		#middle-show{
 			top:0.200rem;
-			left:0.586rem;
+			left:0.326rem;
 		}
 		.dataSort,.dataHeadline{
 			font-size:0.543rem;
@@ -237,7 +237,7 @@
 		}
 		.time{
 			-webkit-text-size-adjust:none;
-            font-size:0.345rem;
+            font-size:0.390rem;
             font-weight: bold;
 		}
 		.timeStart{
@@ -249,6 +249,7 @@
 			position: absolute;
             top:1.919rem;
             left:4.725rem;
+            margin-left:0.133rem;
 		}
 		.leftData{
 			height:1.749rem;
@@ -307,6 +308,7 @@
             margin-left:0.590rem;
             margin-top: 0.295rem;
             transition: border 0.5s;
+            -webkit-tap-highlight-color:rgba(255,0,0,0);
 		}
 		#need li:last-child{
             margin-right:0.443rem;
@@ -328,18 +330,18 @@
 			margin-left:0.591rem;
 		}
 		#box{
-			width:1.240rem;
+			width:1.440rem;
 			height:0.886rem;
 			position: absolute;
-			background:black;
             left:13.585rem;
             top:6.202rem;
-            background: linear-gradient(to right, rgba(34, 42, 46, 0.1), rgba(34, 42, 46, 1));
+            background:linear-gradient(to right, rgba(34, 42, 46, 0.1), rgba(34, 42, 46, 1));
+            background: -ms-linear-gradient(left, rgba(34, 42, 46, 0.1), rgba(34, 42, 46, 1));
+            background:-moz-linear-gradient(left,rgba(34, 42, 46, 0.1),rgba(34, 42, 46, 1));
             z-index:1;
 		}
 	   #need li:hover{
-    border-bottom: 0.147rem solid white;
-    background:#222a2e;	
+            border-bottom: 0.147rem solid white;
         }
 
 }
