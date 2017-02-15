@@ -1,0 +1,18 @@
+[ 2017-02-14T16:52:40+08:00 ] ::1 /coalball/Home/Index/upload
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'roost'@'localhost' (using password: YES)
+
+[ 2017-02-14T17:15:55+08:00 ] ::1 /coalball/Home/Index/upload
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'roost'@'localhost' (using password: YES)
+
+[ 2017-02-14T17:17:00+08:00 ] ::1 /coalball/Home/Index/upload
+ERR: 1146:Table 'coalball.cl_text' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `cl_text`
+
+[ 2017-02-14T18:19:50+08:00 ] ::1 /coalball/Home/Index/upload
+ERR: 1048:Column 'title' cannot be null
+ [ SQL语句 ] : INSERT INTO `cl_xq` (`title`,`update_time`,`content`) VALUES (NULL,'2017-02-14 18:19:50',NULL)
+
+[ 2017-02-14T18:21:07+08:00 ] ::1 /coalball/Home/Index/upload
+ERR: 1048:Column 'title' cannot be null
+ [ SQL语句 ] : INSERT INTO `cl_xq` (`title`,`update_time`,`content`) VALUES (NULL,'2017-02-14 18:21:07',NULL)
+
