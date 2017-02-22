@@ -244,6 +244,9 @@
   border-top-color: black;
   margin-left: 0.5rem;
 }
+#need-select{
+display:none;
+}
 #upload span {
   font-size: 0.17692308rem;
   margin-left: 0.23076923rem;
@@ -328,6 +331,9 @@ textarea {
   margin-top: 0.15384615rem;
   margin-left: 1.38461538rem;
   border-color: rgba(0, 0, 0, 0.2);
+  max-width: 4.46153846rem;
+  max-height:0.53846154rem;
+  resize: none;
 }
 #xfile {
   position: absolute;
@@ -410,7 +416,10 @@ textarea {
   color: white;
   border: none;
 }
-
+hr
+{
+  display:none;
+}
 
 @media screen and (max-width:479px){
 
@@ -558,6 +567,218 @@ textarea {
 	   #need li:hover{
             border-bottom: 0.147rem solid white;
         }
+
+
+/*移动端发布页面相应css*/
+#middle-headline,
+.upload-leftDate,
+#reset-btn,
+.contact,
+#img-tip,
+#preview,
+#refresh,
+#empty,
+#img-num,
+#img-number,
+#title2 {
+  display: none;
+}
+body{
+  overflow: hidden;
+}
+#pic2 {
+  display: block;
+}
+#upload button {
+  display: none;
+}
+#middle-upload {
+  position: relative;
+  width: 100%;
+  height: 23.44116268rem;
+  margin-top: 0;
+  top: -7.26676043rem;
+  left: 0;
+}
+#triangle {
+  height: 0.84388186rem;
+  width: 0.84388186rem;
+  border: none;
+  font-size: 0.84388186rem;
+  color: #7f7f7f;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+}
+#title1 {
+  position: absolute;
+  top: 0;
+  width: 99%;
+  height: 1.40646976rem;
+  background: #1e262c;
+  font-size: 0.60947023rem;
+  line-height: 1.40646976rem;
+  text-align: center;
+}
+#finish-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.87529301rem;
+  height: 1.17205813rem;
+  margin-top: 0.09376465rem;
+  background: #1e262c;
+  font-size: 0.5625879rem;
+  color: #7f7f7f;
+  font-weight: bold;
+}
+#upload {
+  width: 100%;
+  position:relative;
+  top: 1.40646976rem;
+  background: #f2f2f2;
+  height: 23.44116268rem;
+}
+br{
+  display:none;
+}
+select {
+  position:absolute;
+  top: 0.1750586rem;
+  left: 7.50117206rem;
+  border-radius: 0.23441163rem;
+  -webkit-border-radius: 0.23441163rem;
+  -moz-border-radius: 0.23441163rem;
+  width: 7.01293952rem;
+  height: 1.28452883rem;
+  font-size: 0.5625879rem; 
+}
+#upload-btn {
+  width: 3.89123301rem;
+  height: 3.89123301rem;
+  font-size: 1.40646976rem;
+  position: absolute;
+  left: 10.07969995rem;
+  top: 13.40834505rem;
+  z-index: 9999;
+  line-height: 3.89123301rem;
+}
+.upload-data {
+  width: 100%;
+  height: 4.68823254rem;
+  position: absolute;
+  top: 14.06469761rem;
+  background: #f2f2f2;
+  border: none;
+}
+textarea {
+  width:78%;
+  height: 5.0947023rem;
+  max-width: 15.00234412rem;
+  max-height: 5.0947023rem;
+  font-size: 0.60947023rem;
+  margin-left: 0;
+  padding-left: 3.28176278rem;
+  padding-right: 0.09376465rem;
+  padding-top: 0.09376465rem;
+  border-bottom:0.04688233rem solid #c1c1c1;
+  margin-top: 5.36905767rem;
+  border: none;
+  background: #f2f2f2;
+}
+#upload span {
+  font-size: 0.60947023rem;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  color: #7f7f7f;
+}
+#upload span i {
+  margin-left: 0;
+  color: #7f7f7f;
+}
+#pic1,
+#pic2 {
+  width: 3.89123301rem;
+  height: 3.89123301rem;
+  position: absolute;
+  left: 0.93764651rem;
+}
+#pic2 {
+  left: 5.53211439rem;
+  margin-top: 0.23441163rem;
+}
+#chacter-day {
+  position: absolute;
+  right: 0;
+}
+#day-num {
+  position: absolute;
+  top: 3.9123441rem;
+  left: 5.38993905rem;
+  width: 2.21293952rem;
+  height: 0.98452883rem;
+  border: none;
+  background: #f2f2f2;
+  font-size: 0.60947023rem;
+  z-index: 999;
+  margin-top:0;
+  line-height:0.98452883rem;
+  padding:0;
+}
+#upload-headline {
+  padding-left: 0.5625879rem;
+  position: absolute;
+  top: 2.12217534rem;
+  left: 3.28176278rem;
+  width: 9.37646507rem;
+  height: 0.98452883rem;
+  border: none;
+  background: #f2f2f2;
+  font-size: 0.60947023rem;
+}
+#upload #chacter-day {
+  top: 4.20993905rem;
+  left:3.20993905rem;;
+}
+#upload #chacter-type {
+  top: 0.46882325rem;
+  left: 0.46882325rem;
+}
+#upload #chacter-headline {
+  top:2.35658697rem;
+}
+#upload #chacter-time {
+  top: 4.20993905rem;
+  left: 0.42194093rem;
+}
+#upload #chacter-describe {
+  top: 5.95705579rem;
+}
+#upload #chacter-img {
+  top: 12.18940459rem;
+}
+hr {
+  display: block;
+  z-index: 999;
+  position: relative;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.upload-hr3 {
+  top: 5.08152836rem;
+}
+.upload-hr1 {
+  top: 1.59399906rem;
+}
+.upload-hr2 {
+  top: 3.31894046rem;
+}
+
+
 
 }
 

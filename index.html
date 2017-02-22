@@ -56,30 +56,52 @@
      <div id='middle-upload'>
      	<div id='title1'>发布需求</div>
      	<div id='title2'>物理实验(敬请期待)</div>
-     	<div id='triangle'></div>
+     	<div id='triangle'><</div>
      	<form>
      	  <div id='upload'>
-     		<span><i>*</i>需求类型：</span>
+     		<span id='chacter-type'><i>*</i>需求类型：</span>
+
+     		<select id='need-select'>
+     			<option value="" selected="selected" disabled="disabled">请选择</option>
+     			<option value="">学习</option>
+     			<option value="">组队/招人</option>
+     			<option value="">开发/设计/视频制作</option>
+     			<option value="">情感</option>
+     			<option value="">实验</option>
+     			<option value="">其他</option>
+     		</select>
+ 		  <hr class="upload-hr1">
      		<button class="selected" type='button' title='button'>学习</button>
      		<button type='button' title='button'>组队/招人</button>
      		<button type='button' title='button'>开发/设计/视频制作</button>
      		<button type='button' title='button'>情感</button>
      		<button type='button' title='button'>实验</button>
      		<button type='button' title='button'>其他</button><br>
-     		<span><i>*</i>标题：</span>
+     		<span id='chacter-headline'><i>*</i>标题：</span>
      		<input id='upload-headline' class='upload-text' type="text" name=""><br>
-     		<span>联系方式：</span><input class='upload-text' type="text" name=""><br>
-     		<span>持续时间：</span><input id='day-num' class='upload-text' type="text" name="">
-     		<span>天</span><br>
-     		<span><i>*</i>描述：</span><textarea id='upload-content' placeholder="这里输入内容，最多666字哦~"></textarea><br>
-     		<span>插入图片：</span><label id='upload-btn' for="xfile">浏览</label>
-     		<span id='inputimg'><input id="xfile"  name="xfile" type="file" multiple='multiple' ></span><p id='img-num'>已选择<span id='img-number'>0</span>张图</p>
+            <hr class="upload-hr2">         
+     		<span class="contact">联系方式：</span><input class='upload-text contact' type="text" name=""><br class="contact">
+
+     		<span id='chacter-time'>持续时间：</span><input id='day-num' class='upload-text' type="text" name="">
+     		<span id='chacter-day'>天</span><br>
+     		<hr class="upload-hr3">
+
+     		<span id='chacter-describe'><i>*</i>描述：</span><textarea id='upload-content' placeholder="这里输入内容，不要忘记留下联系方式，最多666字哦~"></textarea><br>
+     		<hr class="upload-hr4">
+
+     		<span id='chacter-img'>插入图片：</span><label id='upload-btn' for="xfile">浏览</label>
+     		<span id='inputimg'>
+     		<input id="xfile"  name="xfile" type="file" multiple='multiple' >
+     		</span>
+     		<p id='img-num'>
+     		已选择<span id='img-number'>0</span>张图
+     		</p>
      		 <div  id='empty'>清空</div> <br>     		
      		<p id='img-tip'>温馨提示：鼠标点击时按住Ctrl键加选/减选，按住Shift键连续选择</p>
      	   </div>
      		<span id='preview'>这是预览↓↓↓</span><button type='button' id='refresh'>刷新</button>
      		<section class='upload-data data'>
-     			<div class='leftData'>
+     			<div class='leftData upload-leftDate'>
      				<span class='dataSort' ></span>
    		            <span class='dataHeadline' ></span>
    		            <p class='dataBody'></p>
@@ -205,16 +227,40 @@
          var off=true;
   $('#publish').click(function(){
   	if(off){
+  		if($(document.body).outerWidth(true)<479){
+  		$('#right-state').css('display','none');
+  		$('#left-bar').css('display','none');
+  		$('.upload-leftDate').css('display','none');
+  		$("#finish-btn").val('完成');
+  		$("#upload-btn").html('+');
+  		$('#need-select').css('display','block');
+  		}
   		$('#middle-show').css('display','none');
 		$('#middle-headline').css('display','none');
 		$('#middle-upload').css('display','block');
 		 off=false;
   	}else{
   		$('#middle-show').css('display','block');
-		$('#middle-headline').css('display','block');
+  		if($(document.body).outerWidth(true)>479){
+  		
+  		$('#middle-headline').css('display','block');
+  		}
+		
 		$('#middle-upload').css('display','none');
+		$('#need-select').css('display','none');
 		 off=true;
   	}		
+	});
+   $('#triangle').click(function(){
+   	if($(document.body).outerWidth(true)<479){
+   		$('#right-state').css('display','block');
+        $('#left-bar').css('display','block');
+  		$('#middle-show').css('display','block');
+		$('#middle-upload').css('display','none');
+		$('#need-select').css('display','none');
+  			off=true;
+   	}
+   	    
 	});
 
 
@@ -284,6 +330,7 @@ else {
    var str2;
 $('#refresh').click(function(){
   time();
+  $('.upload-data').css('display','block');
     var text1 =$('#upload-headline').val();
     var text2 =$('#upload-content').val();
 	$(".upload-data .dataHeadline").html(text1);
