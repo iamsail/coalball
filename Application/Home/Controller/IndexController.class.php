@@ -4,7 +4,7 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
         $xq = M('xq');
-        $xqinfo = $xq ->select();
+        $xqinfo = $xq ->order('id desc')->select();
         $this->assign('xqinfo',$xqinfo );
 //        $this->display('/index');
         $this->display('/index');
@@ -23,11 +23,17 @@ class IndexController extends Controller {
 //            if(!$info) {// 上传错误提示错误信息
 //                $this->error($upload->getError());
 //            }else{// 上传成功
-                var_dump($info);
-                var_dump($info['0']['savename']);
-                var_dump($info['0']['savepath']);
-                var_dump($info['1']['savename']);
-                var_dump($info['1']['savename']);
+
+
+
+//                var_dump($info);
+//                var_dump($info['0']['savename']);
+//                var_dump($info['0']['savepath']);
+//                var_dump($info['1']['savename']);
+//                var_dump($info['1']['savename']);
+
+
+
                 $model = M('xq');
                 $data['title'] = $_POST['title'];
                 $data['update_time'] = date('Y-m-d');
@@ -44,11 +50,13 @@ class IndexController extends Controller {
 
                 $right = $model->add($data);
                 if($right){
-                    echo "添加到数据库成功";
-                    echo "<br>";
+//                    echo "添加到数据库成功";
+//                    echo "<br>";
+                    $this->success('发布成功');
                 }else{
-                    echo "添加到数据库失败";
-                    echo "<br>";
+//                    echo "添加到数据库失败";
+//                    echo "<br>";
+                    $this->success('发布失败');
                 }
 //                $this->success('上传成功！');
 //            }
