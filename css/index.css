@@ -201,6 +201,11 @@
     background: -ms-linear-gradient(left bottom,rgba(34, 42, 46, 1), rgba(34, 42, 46, 1));
     background:-moz-linear-gradient(left bottom,yellow,orange);
 }
+
+.btnGroup1 a{
+    color: white;
+}
+
 #publish{
 
 }
@@ -213,6 +218,303 @@
 	background-position:center;
 	background-size:0.867rem 0.223rem;
 }
+ /*    登录注册弹出层页面的css*/
+    #mask {
+      background: black; 
+      opacity: 0.4; 
+      filter: alpha(opacity=40); 
+      position: absolute;
+      left: 0; 
+      top: 0; 
+      display:none;
+    }
+#login-box { 
+   width:400px; 
+   height:300px; 
+   padding: 10px; 
+   background: white;
+   background-color:#f2f2f2;
+   position: absolute; 
+   display: none;
+   z-index:999;
+   border-radius:3px;
+ }
+#close {
+   position: absolute; 
+   right:2%;
+   top:2%; 
+   font-size:20px;
+   text-decoration:none;
+ }
+ #login-header{
+  width:370px;
+  border-bottom:1px solid #787d82;
+  margin-left:15px;
+  padding-left:10px;
+  margin-top:0;
+  line-height:35px;
+  padding-bottom:0px;
+
+ }
+ #login-body{
+   width:360px;
+   margin-left:20px;
+ }
+#register{
+  display:none;
+  width:360px;
+  margin-left:20px;
+}
+#login-footer{
+  margin-top:15px;
+  width:360px;
+}
+.loginHeadline{
+  font-size:17px;
+  margin-bottom:0px;
+  cursor:pointer;
+  padding:0 20px 8px 20px ;
+}
+#login-email,#register-email{
+  width:350px;
+  height:30px;
+  padding:3px 0 3px 7px;
+  font-size:16px;
+  margin-top:12px;
+  background:#f2f2f2;
+  border:1px solid rgba(0,0,0,0.5);
+}
+#login-password,#register-password{
+  width:350px;
+  height:30px;
+  padding:3px 0 3px 7px;
+  font-size:16px;
+  background:#f2f2f2;
+  border:1px solid rgba(0,0,0,0.5);
+
+}
+#login-body p{
+  font-size:14px;
+  color:red;
+}
+#register p{
+  font-size:14px;
+  color:red;
+}
+#login-body label{
+  font-size:16px;
+}
+#remeber-password{
+width:18px;
+height:18px;
+}
+#login-body a{
+  font-size:15px;
+  margin-left:150px;
+  text-decoration:none;
+  color:#787d82;
+}
+#login-button{
+  width:355px;
+  height:38px;
+  background:#FF3030;
+  box-shadow:0 0 5px #f1f1f1;
+  border-radius:5px;
+  font-size:18px;
+  color:white;
+  margin-top:10px;
+  cursor:pointer;
+}
+#register-button{
+  width:355px;
+  height:38px;
+  background:#FF3030;
+  box-shadow:0 0 5px #f1f1f1;
+  border-radius:5px;
+  font-size:18px;
+  color:white;
+  margin-top:10px;
+  cursor:pointer;
+}
+#login-footer p{
+display:inline-block;
+margin-left:27px;
+font-size:18px;
+}
+#login-footer a{
+   border-radius:20px;
+   margin:0 10px;
+}
+#login-footer img{
+  width:25px;
+  height:25px;
+  padding-bottom:3px;
+  border-radius:13px;
+}
+#login-img1:hover{
+  background-color:#4053D4;
+}
+#login-img2:hover{
+  background-color:pink;
+}
+#login-box span:hover{
+  border-bottom:1px solid #f01400;
+  color: #f01400;
+}
+.activeHeadline{
+  border-bottom:1px solid #f01400;
+  color: #f01400;
+}
+/*登录注册弹出层css*/
+@media screen and (max-width:479px){
+#mask {
+  background: black;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+#login-box {
+  width: 12.5rem;
+  height: 9.375rem;
+  padding: 0.3125rem;
+  background: white;
+  background-color: #f2f2f2;
+  position: absolute;
+  display: none;
+  z-index: 999;
+  border-radius: 0.09375rem;
+}
+#close {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 0.625rem;
+  text-decoration: none;
+}
+#login-header {
+  width: 11.5625rem;
+  border-bottom: 0.03125rem solid #787d82;
+  margin-left: 0.46875rem;
+  padding-left: 0.3125rem;
+  margin-top: 0;
+  line-height: 1.09375rem;
+  padding-bottom: 0rem;
+}
+#login-body {
+  width: 11.25rem;
+  margin-left: 0.625rem;
+}
+#register {
+  display: none;
+  width: 11.25rem;
+  margin-left: 0.625rem;
+}
+#login-footer {
+  margin-top: 0.46875rem;
+  width: 11.25rem;
+}
+.loginHeadline {
+  font-size: 0.53125rem;
+  margin-bottom: 0rem;
+  cursor: pointer;
+  padding: 0 0.625rem 0.19rem 0.625rem;
+}
+#login-email,
+#register-email {
+  width: 10.9375rem;
+  height: 0.9375rem;
+  padding: 0.09375rem 0 0.09375rem 0.21875rem;
+  font-size: 0.5rem;
+  margin-top: 0.375rem;
+  background: #f2f2f2;
+  border: 0.03125rem solid rgba(0, 0, 0, 0.5);
+}
+#login-password,
+#register-password {
+  width: 10.9375rem;
+  height: 0.9375rem;
+  padding: 0.09375rem 0 0.09375rem 0.21875rem;
+  font-size: 0.5rem;
+  background: #f2f2f2;
+  border: 0.03125rem solid rgba(0, 0, 0, 0.5);
+}
+#login-body p {
+  font-size: 0.4375rem;
+  color: red;
+}
+#register p {
+  font-size: 0.4375rem;
+  color: red;
+}
+#login-body label {
+  font-size: 0.5rem;
+}
+#remeber-password {
+  width: 0.5625rem;
+  height: 0.5625rem;
+}
+#login-body a {
+  font-size: 0.46875rem;
+  margin-left: 4.6875rem;
+  text-decoration: none;
+  color: #787d82;
+}
+#login-button {
+  width: 11.09375rem;
+  height: 1.1875rem;
+  background: #FF3030;
+  box-shadow: 0 0 0.15625rem #f1f1f1;
+  border-radius: 0.15625rem;
+  font-size: 0.5625rem;
+  color: white;
+  margin-top: 0.3125rem;
+  cursor: pointer;
+}
+#register-button {
+  width: 11.09375rem;
+  height: 1.1875rem;
+  background: #FF3030;
+  box-shadow: 0 0 0.15625rem #f1f1f1;
+  border-radius: 0.15625rem;
+  font-size: 0.5625rem;
+  color: white;
+  margin-top: 0.3125rem;
+  cursor: pointer;
+}
+#login-footer p {
+  display: inline-block;
+  margin-left: 0.84375rem;
+  font-size: 0.5625rem;
+}
+#login-footer a {
+  border-radius: 0.625rem;
+  margin: 0 0.3125rem;
+}
+#login-footer img {
+  width: 0.78125rem;
+  height: 0.78125rem;
+  padding-bottom: 0.09375rem;
+  border-radius: 0.40625rem;
+}
+#login-img1:hover{
+  background-color:#4053D4;
+}
+#login-img2:hover{
+  background-color:red;
+}
+#login-box span:hover {
+  border-bottom: 0.03125rem solid #f01400;
+  color: #f01400;
+}
+.activeHeadline {
+  border-bottom: 0.03125rem solid #f01400;
+  color: #f01400;
+}
+  }
+
 
 
                  /*    需求上传页面的css*/
@@ -466,6 +768,7 @@ hr
 		.btnGroup,.dataBody,.img2,#head,#login-state,#middle-headline{
 			display:none;
 		}
+
 		#middle-bar{
 			 width:100%;
 			 position:absolute;
@@ -587,7 +890,10 @@ hr
 			font-size:0.543rem;
 			font-weight:normal;
 			margin-left:0.591rem;
+            color: white;
 		}
+
+
     #login{
       position:absolute;
       top:0.41rem;
