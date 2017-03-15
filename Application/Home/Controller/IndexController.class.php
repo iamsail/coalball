@@ -6,6 +6,10 @@ class IndexController extends Controller {
         $xq = M('xq');
         $xqinfo = $xq ->order('id desc')->select();
         $this->assign('xqinfo',$xqinfo );
+
+        $client = M('client');
+        $headImgUrl = $client ->field(headimg)->select();
+        $this->assign('headImgUrl',$headImgUrl );
 //        $this->display('/index');
         $this->display('/index');
 }
@@ -63,5 +67,14 @@ class IndexController extends Controller {
         }else{
             echo "提交失败";
         }
+    }
+
+
+    public function logout(){
+        $_SESSION = array(null); // 把session清空。
+        session_destroy();   // 彻底销毁session
+//        echo  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$_SESSION['name']."&nbsp;&nbsp;"."注销成功"."<br>";
+//        echo  "<a href='http://123.207.83.243/updown/index.php'>点此返回主页</a>";
+        $this->success('注销成功');
     }
 }

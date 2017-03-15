@@ -143,20 +143,183 @@
 
 	<!-- 右边状态区开始 -->
    <section id='right-state'>
-   	<img id='head' src="Application/Home/Common/img/资源 1.png">
-   	<span id='login-state'>没有登录</span>
+   	<!--<img id='head' src="Application/Home/Common/img/资源 1.png">-->
 
-   	<!--<a class='btnGroup1' id='login' href="http://f.yiban.cn/iapp97545">登录</a>-->
+
+	   <?php if(null != $_SESSION['name'] ): ?><!--这儿需要调用数据库存放的url-->
+		   <!--<img id='head' src='Application/Home/Common/img/资源 1.png'>-->
+		   <!--<?php var_dump($headImgUrl[0]['headimg']) ?>-->
+
+		   <?php echo "<img class='head' src=". $headImgUrl[0]['headimg'].">" ?>
+
+
+		   <!--<img class='head' src="Application/Home/Common/img/资源 1.png">-->
+		   <span class='login-state'><?php echo $_SESSION['name'] ?></span>
+		   <div class='btnGroup1' id='logout'><a href="Home/Index/logout">注销</a></div>
+		   <?php else: ?>
+		   <!--<img class='head' src="Application/Home/Common/img/资源 1.png">-->
+		   <span class='login-state'>没有登录</span>
+		   <div class='btnGroup1' id='login'>登录</div><?php endif; ?>
+
+
    	<!--<div class='btnGroup1' id='login'>登录</div>-->
-   	<div class='btnGroup1' id='login'><a href="http://f.yiban.cn/iapp97545" class="login">登录</a></div>
+<!--    	<div class='btnGroup1' id='login'><a href="http://f.yiban.cn/iapp97545" class="login">登录</a></div> -->
 	<div  name="dashmain" id="dash-main-id-87903d" class="dash-main-4 87903d-2"  ></div>
   <div class='btnGroup1' id='pay'>打赏</div>
    	<div class='btnGroup1' id='publish'>发布</div>
    </section>
 	<!-- 右边状态区结束 -->
+
+  <!-- 登录弹出层开始 -->
+  <div id="mask"></div>
+    <div id="login-box">
+      <div id='login-header'>
+        <h1>
+        <span id='login-headline' class="loginHeadline activeHeadline">登录</span>
+        <span id='register-headline' class="loginHeadline">注册</span>
+        </h1>
+        <a href="#" id='close'>x</a>
+      </div>
+      <div id='login-body'>
+      <form action="" autocomplete="on" id='login-form'>
+        <input id='login-email' type="text" name='email' placeholder="请输入登录邮箱" maxlength="37">
+        <p id='email-tip'>&nbsp;</p>
+        <input id='login-password' type="password" name='password' placeholder="6-16位密码，区分大小写，不能使用空格" maxlength="16">
+        <p id='password-tip'>&nbsp;</p>
+        <label for="remeber-password"><input type="checkbox" id='remeber-password' checked="checked">记住密码</label>
+        <a href="#">忘记密码？</a>
+        <input id='login-button' type="submit" value='登录'>
+        </form>
+      </div>
+      <div id='register'>
+       <form action="" autocomplete="on">
+        <input id='register-email' type="text" name='email' placeholder="请输入注册邮箱" maxlength="37">
+        <p id='register-tip1'>&nbsp;</p>
+        <input id='register-password' type="password" name='password' placeholder="6-16位密码，区分大小写，不能使用空格" maxlength="16">
+        <p id='register-tip2'>&nbsp;</p>
+        <input id='register-button' type="submit" value='注册'>
+        </form>
+      </div>
+      <div id='login-footer'>
+        <p>第三方登录：</p>
+        <a href="#"><img src="Application/Home/Common/img/QQ.png" alt="qq登录" id='login-img1'></a>
+        <!--<a href="http://f.yiban.cn/iapp97545"><img src="Application/Home/Common/img/QQ.png" alt="qq登录" id='login-img1'></a>-->
+        <!--<a href="#"><img src="Application/Home/Common/img/yiban-logo.png" alt="易班登录" id='login-img2'></a>-->
+        <a href="http://f.yiban.cn/iapp97545"><img src="Application/Home/Common/img/yiban-logo.png" alt="易班登录" id='login-img2'></a>
+      </div>
+    </div>
+  <!-- 登录弹出层结束 -->
+
 <script  src="Application/Home/Common/js/ds.js"></script>
+<!-- <script src='Application/Home/Common/js/jquery-3.1.1.js'></script> -->
 <script src='Application/Home/Common/js/jquery-3.1.1.js'></script>
-  <script type= "application/javascript">
+<script src='Application/Home/Common/js/jquery.cookie.js'></script>
+<script type= "application/javascript">
+  // 登录弹出层js开始
+  $('#close').click(function(){
+  $('#mask').css('display','none');
+  $('#login-box').css('display','none');
+
+});
+  $('#login').click(function(){
+  $("#login-email").html($.cookie("userName")); 
+   $("#login-password").val($.cookie("passWord"));
+
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+
+    $('#mask').css('display','block');
+    var width1 = Math.max( document.body.offsetWidth, document.documentElement.clientWidth ) + 'px';
+    var height1 = Math.max( document.body.offsetHeight, document.documentElement.clientHeight ) + 'px';
+    $('#mask').css('width',width1);
+        $('#mask').css('height',height1);
+
+        $('#login-box').css('display','block');
+         var width2 = (document.documentElement.clientWidth - $('#login-box').outerWidth() ) / 2 + scrollLeft + 'px';
+
+         var height2 = ( document.documentElement.clientHeight - $('#login-box').outerHeight() ) / 2 + scrollTop + 'px';
+         $('#login-box').css('left',width2);
+        $('#login-box').css('top',height2);
+  })
+  $(window).scroll(function(){
+    if ($('#login-box').css("display")=='none') return ;
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    var width3 = ( document.documentElement.clientWidth - $('#login-box').outerWidth()) / 2 + scrollLeft + 'px';
+    var height3 = ( document.documentElement.clientHeight - $('#login-box').outerHeight() ) / 2 + scrollTop + 'px';
+    $('#login-box').css("left",width3);
+    $('#login-box').css("top",height3);
+  })
+  $(window).resize(function(){
+    if ($('#mask').css("display")=='none') return ;
+    var width1 = Math.max( document.body.offsetWidth, document.documentElement.clientWidth ) + 'px';
+    var height1 = Math.max( document.body.offsetHeight, document.documentElement.clientHeight ) + 'px';
+    $('#mask').css('width',width1);
+        $('#mask').css('height',height1);
+    if ($('#login-box').css("display")=='none') return ;
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    var width3 = ( document.documentElement.clientWidth - $('#login-box').outerWidth()) / 2 + scrollLeft + 'px';
+    var height3 = ( document.documentElement.clientHeight - $('#login-box').outerHeight() ) / 2 + scrollTop + 'px';
+    $('#login-box').css("left",width3);
+    $('#login-box').css("top",height3);
+  })
+  $('#login-headline').click(function(){
+    $("#login-body").css('display','block');
+    $("#register").css('display','none');
+    $('.activeHeadline').removeClass('activeHeadline');
+    $(this).addClass('activeHeadline');
+  });
+
+    $('#register-headline').click(function(){
+    $("#login-body").css('display','none');
+    $("#register").css('display','block');
+    $('.activeHeadline').removeClass('activeHeadline');
+    $(this).addClass('activeHeadline');
+  });
+    $('#login-email').blur(function(){
+      let re=/^\w+[\.\_]?\w+\@\w+\.[a-zA-Z]+[\.a-zA-Z]*$/;
+          if (!re.test($('#login-email').val())){
+        $('#email-tip').text('你的邮箱格式不正确');
+      }else{
+         $('#email-tip').html('&nbsp');
+      }
+    });
+        $('#register-email').blur(function(){
+      let re=/^\w+[\.\_]?\w+\@\w+\.[a-zA-Z]+[\.a-zA-Z]*$/;
+          if (!re.test($('#register-email').val())){
+        $('#register-tip1').text('你的邮箱格式不正确');
+      }else{
+         $('#register-tip1').html('&nbsp');
+      }
+    });
+        $('#login-password').blur(function(){
+      let re=/^\S{6,16}$/;
+          if (!re.test($('#login-password').val())){
+        $('#password-tip').text('你的密码格式不正确');
+      }else{
+         $('#password-tip').html('&nbsp');
+      }
+    });
+          $('#register-password').blur(function(){
+      let re=/^\S{6,16}$/;
+          if (!re.test($('#register-password').val())){
+        $('#register-tip2').text('你的密码格式不正确');
+      }else{
+         $('#register-tip2').html('&nbsp');
+      }
+    });
+      $('#login-form').submit(function(){
+         if ($("#remeber-password").attr("checked") == 'checked') { 
+       var userName = $("#login-email").val(); 
+       var passWord = $("#login-password").val();  
+       $.cookie("remeber-password", "true", { expires: 14 }); 
+       $.cookie("userName", userName, { expires: 14 });
+       $.cookie("passWord", passWord, { expires: 14 }); 
+          } 
+      });   
+  // 登录弹出层js结束
+
 	$('#need>li').click(function(){
 		var need = $(this).index();	
       $(".data").css('display','none');
@@ -308,7 +471,7 @@ $('#day-num').change(function(){
   var text3="学习:";
 $("[title='button']").click(function(){
     $('.selected').removeClass('selected');
-    $("[title='button']").attr("checked", false); 
+    $("[title='button']").attr("checked", false);
 	$(this).parent().addClass('selected');
 	$(this).attr("checked", true);
 	switch ($(this).index())
@@ -331,8 +494,10 @@ case 7:
 case 8:
   text3="其他:";
   break;
+
 }
 });
+
 </script>
 </body>
 </html>

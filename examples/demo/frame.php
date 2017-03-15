@@ -12,7 +12,7 @@
 	 * 包含SDK
 	 */
 	require("../../classes/yb-globals.inc.php");
-	
+
 	session_start();
 
 	
@@ -41,9 +41,9 @@
 								#// 可以输出info数组查看
 								// 访问令牌[visit_oauth][access_token]
 			
-			$_SESSION['token']	= $info['visit_oauth']['access_token'];
-			$_SESSION['usrid']	= $info['visit_user']['userid'];
-			$_SESSION['name']	= $info['visit_user']['username'];
+//			$_SESSION['token']	= $info['visit_oauth']['access_token'];
+//			$_SESSION['usrid']	= $info['visit_user']['userid'];
+//			$_SESSION['name']	= $info['visit_user']['username'];
 
 //			=================================自己加入的
 
@@ -64,6 +64,18 @@
 	$_SESSION['token']	= $info['visit_oauth']['access_token'];
 	$_SESSION['usrid']	= $info['visit_user']['userid'];
 	$_SESSION['name']	= $info['visit_user']['username'];
+
+//==================加入用户头像
+
+$ap = YBOpenApi::getInstance()->bind($_SESSION['token']);
+$user = $ap->getUser();
+$one = $user->other($_SESSION['usrid']);
+$head_img = $one['info']['yb_userhead'];
+
+//==================加入用户头像
+
+
+
 //	$_SESSION['name']	= $info['visit_user']['username'];
 	$link=mysqli_connect("localhost","root","sail","",3306);	//连接数据库
 //	$link=mysqli_connect("localhost","root","sail","",3306);	//连接数据库
@@ -72,13 +84,13 @@
 	{
 		exit(mysqli_connect_error());
 	}
-	mysqli_select_db($link,"updown");	//选择数据库
+	mysqli_select_db($link,"coalball");	//选择数据库
 	mysqli_set_charset($link,'utf8');	//设定字符集
-	$sql = "SELECT uid FROM md_client WHERE uid = '$_SESSION[usrid]'";
+	$sql = "SELECT uid FROM cl_client WHERE uid = '$_SESSION[usrid]'";
 	$result = mysqli_query($link,$sql);	//执行SQL语句
 	$num = mysqli_num_rows($result);	//统计执行结果影响的行数
 	if(!$num){
-		$sql_insert = "INSERT INTO md_client(uid,username) VALUES('$_SESSION[usrid]','$_SESSION[name]')";
+		$sql_insert = "INSERT INTO cl_client(uid,username,headimg) VALUES('$_SESSION[usrid]','$_SESSION[name]','$head_img')";
 		$res_insert = mysqli_query($link,$sql_insert);
 	}
 	#####################################################################
@@ -107,6 +119,9 @@
 	<div>
 		<h3>
 			登录成功
+			<?php echo var_dump($info); ?>
+			<?php echo var_dump($one); ?>
+			<?php echo var_dump($head_img); ?>
 		</h3>
 	</div>
 	<?php echo $adaptive; ?><!-- // 页面自适应代码 -->

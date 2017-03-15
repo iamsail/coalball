@@ -15,7 +15,8 @@ if (!function_exists('mcrypt_decrypt')) {
 //以下三个变量内容需换成本应用的
 $APPID = "dcffa2c2355e0180";   //在open.yiban.cn管理中心的AppID
 $APPSECRET = "c151845cc5c603e0a5a61fce2338f0d3"; //在open.yiban.cn管理中心的AppSecret
-$CALLBACK = "http://f.yiban.cn/iapp97601";  //在open.yiban.cn管理中心的oauth2.0回调地址
+//$CALLBACK = "http://f.yiban.cn/iapp97601";  //在open.yiban.cn管理中心的oauth2.0回调地址
+$CALLBACK = "http://f.yiban.cn/iapp97545";  //在open.yiban.cn管理中心的oauth2.0回调地址
 
 if(isset($_GET["code"])){   //用户授权后跳转回来会带上code参数，此处code非access_token，需调用接口转化。
 	$getTokenApiUrl = "https://oauth.yiban.cn/token/info?code=".$_GET['code']."&client_id={$APPID}&client_secret={$APPSECRET}&redirect_uri={$CALLBACK}";
