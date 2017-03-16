@@ -172,7 +172,7 @@
 			   <div class='leftData'>
 				   <span class='dataSort' >开发:</span>
 				   <span class='dataHeadline'>找一个开发英雄联盟联赛的队友</span>
-				   <p class='dataBody'>要求不多，一区钻石水平以上；熟练掌握各种辅助英雄的玩法；每天能抽出3个小时时间练习，晚上8点到11点是额外的磨合时间；希望有兴趣的朋友们联系我；qq是2315468970；愿我们合作愉快,为矿大争光 !</p>
+				   <p class='dataBody'>要求不多学习，一区钻石水平以上；熟练掌握各种辅助英雄的玩法；每天能抽出3个小时时间练习，晚上8点到11点是额外的磨合时间；希望有兴趣的朋友们联系我；qq是2315468970；愿我们合作愉快,为矿大争光 !</p>
 				   <span class='time timeStart'>发布时间：2017.1.18</span>
 				   <span class='time timeStop'>截止时间：2017.2.17</span>
 			   </div>
@@ -209,7 +209,7 @@
 
 	<!-- 右边状态区开始 -->
    <section id='right-state'>
-   	<img id='head' src="img/资源 1.png">
+   	<img class='head' src="img/资源 1.png">
    	<span id='login-state'>没有登录</span>
 
    	<!--<a class='btnGroup1' id='login' href="http://f.yiban.cn/iapp97545">登录</a>-->
@@ -369,19 +369,50 @@
       });   
   // 登录弹出层js结束
 
+
+
+  //需求点击分类js代码开始
 	$('#need>li').click(function(){
 		var need = $(this).index();	
-      $(".data").css('display','none');
-      $(".dataSort"+need).css('display','block');
+
       if(need==0)
       {
        $(".data").css('display','block');  
       }
+      if(need==1){
+      	$(".data").css('display','none'); 
+      	$("span:contains('学习')").parents('.data').css('display','block');
+      }
+            if(need==2){
+      	$(".data").css('display','none'); 
+      	$("span:contains('组队')").parents('.data').css('display','block');
+      }
+            if(need==3){
+      	$(".data").css('display','none'); 
+      	$("span:contains('开发')").parents('.data').css('display','block');
+      }
+            if(need==4){
+      	$(".data").css('display','none'); 
+      	$("span:contains('情感')").parents('.data').css('display','block');
+      }
+            if(need==5){
+      	$(".data").css('display','none'); 
+      	$("span:contains('实验')").parents('.data').css('display','block');
+      }
+            if(need==6){
+      	$(".data").css('display','none'); 
+      	$("span:contains('其他')").parents('.data').css('display','block');
+      }
 	});
+  //需求点击分类js代码结束
+
+  //修改不同屏幕大小下的最近-需求分类文字显示开始
      if($("html").width()<=479)
 	{
          $(".leftNeed:first").text("最近");
 	}
+
+	// 发布触发事件
          var off=true;
   $('#publish').click(function(){
   	if(off){
@@ -409,6 +440,8 @@
 		 off=true;
   	}		
 	});
+
+  //从发布返回展示需求首页
    $('#triangle').click(function(){
    	if($(document.body).outerWidth(true)<479){
    		$('#right-state').css('display','block');
@@ -420,7 +453,7 @@
    	}
 	});
 
-
+//清空图片
  $('#empty').click(function(){
       $("#pic1").attr("src", '');
       $("#pic2").attr("src", '');
@@ -430,7 +463,7 @@
 	});
 
 
-
+//图片上传后的预览设置
 var filesLength=1;
 $("#xfile").change(function checkurl(){
 	
@@ -451,7 +484,7 @@ $("#xfile").change(function checkurl(){
    $('#img-number').html(filesLength);
 
 });
-
+//读取本地上传图片的url
 function getObjectURL(file) {
 	var url = null ; 
 	if (window.createObjectURL!=undefined) { // basic
@@ -473,6 +506,8 @@ function getObjectURL(file) {
 //if($('#day-num').val()<0)
 //   {e.preventDefault();}
 //   });
+
+//刷新按钮相关
    var str1;
    var str2;
 $('#refresh').click(function(){
@@ -498,7 +533,7 @@ $('#refresh').click(function(){
 
 	
 });
-
+// 需求持续时间js相关
 function time(){
    var mydate = new Date();
    str1 = "" + mydate.getFullYear() + ".";
@@ -506,7 +541,6 @@ function time(){
    str1 += mydate.getDate();
    var daynumber=$('#day-num').val();
 var str3=mydate.getFullYear() +"-"+(mydate.getMonth()+1)+"-"+mydate.getDate();
-console.log(str3);
 var d= new Date(str3);
 d.setDate(d.getDate() + Number(daynumber));
  str2=d.getFullYear()+"."+(d.getMonth()+1)+"."+d.getDate();
@@ -517,30 +551,31 @@ $('#day-num').change(function(){
 });
 
 
+//分布需求页的点击各种需求获得预览内文字和选中类的添加
   var text3="学习:";
 $("[title='button']").click(function(){
     $('.selected').removeClass('selected');
     $("[title='button']").attr("checked", false); 
 	$(this).parent().addClass('selected');
 	$(this).attr("checked", true);
-	switch ($(this).index())
+	switch ($(this).attr('index'))
 {
-case 3:
+case '1':
   text3="学习:";
   break;
-case 4:
+case '2':
   text3="组队/招人:";
   break;
-case 5:
+case '3':
   text3="开发/设计/视频制作:";
   break;
-case 6:
+case '4':
   text3="情感:";
   break;
-case 7:
+case '5':
   text3="实验:";
   break;
-case 8:
+case '6':
   text3="其他:";
   break;
 }

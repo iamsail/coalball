@@ -176,7 +176,7 @@
 	position:fixed;
 	left:11.431rem;
 }
-#head{
+.head{
     width:0.489rem;
 	height:0.489rem;
 	margin:0.096rem 0.094rem 0.096rem 0.414rem;
@@ -765,7 +765,7 @@ hr
             height:7.235rem;
             z-index:1;
 		}
-		.btnGroup,.dataBody,.img2,#head,#login-state,#middle-headline{
+		.btnGroup,.dataBody,.img2,.head,#login-state,#middle-headline{
 			display:none;
 		}
 
