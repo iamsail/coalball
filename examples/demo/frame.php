@@ -71,7 +71,7 @@ $ap = YBOpenApi::getInstance()->bind($_SESSION['token']);
 $user = $ap->getUser();
 $one = $user->other($_SESSION['usrid']);
 $head_img = $one['info']['yb_userhead'];
-
+$_SESSION['img']	= $one['info']['yb_userhead'];
 //==================加入用户头像
 
 

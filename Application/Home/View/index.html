@@ -81,17 +81,13 @@
 			  <br>
      		<span id='chacter-headline'><i>*</i>标题：</span>
      		<input id='upload-headline' class='upload-text' type="text" name="title"><br>
-            <hr class="upload-hr2">         
-
+            <hr class="upload-hr2">
      		<span id='chacter-time'>持续时间：</span><input id='day-num' class='upload-text' type="text" name="timeLength">
      		<span id='chacter-day'>天</span><br>
      		<hr class="upload-hr3">
-
      		<span id='chacter-describe'><i>*</i>描述：</span><textarea id='upload-content' name="content" placeholder="这里输入内容，不要忘记留下联系方式，最多666字哦~"></textarea><br>
      		<hr class="upload-hr4">
-
      		<span id='chacter-img'>插入图片：</span><label id='upload-btn' for="xfile">浏览</label>
-
      		<span id='inputimg'>
      		<input id="xfile"  name="xfile[]" type="file" multiple='multiple' >
      		</span>
@@ -154,17 +150,12 @@
 
 	   <if condition="null != $_SESSION['name'] ">
 		   <!--这儿需要调用数据库存放的url-->
-		   <!--<img id='head' src='Application/Home/Common/img/资源 1.png'>-->
-		   <!--<php>var_dump($headImgUrl[0]['headimg'])</php>-->
-
-		   <php>echo "<img class='head' src=". $headImgUrl[0]['headimg'].">"</php>
-
-
-		   <!--<img class='head' src="Application/Home/Common/img/资源 1.png">-->
+		   <!--<php>echo "<img class='head' src=". $headImgUrl[1][headimg].">"</php>-->
+		   <php>echo "<img class='head' src=". $_SESSION['img'].">"</php>
 		   <span class='login-state'><php>echo $_SESSION['name']</php></span>
 		   <div class='btnGroup1' id='logout'><a href="Home/Index/logout">注销</a></div>
 		   <else/>
-		   <!--<img class='head' src="Application/Home/Common/img/资源 1.png">-->
+		   <img class='head' src="Application/Home/Common/img/资源 1.png">
 		   <span class='login-state'>没有登录</span>
 		   <div class='btnGroup1' id='login'>登录</div>
 	   </if>
@@ -210,16 +201,13 @@
       </div>
       <div id='login-footer'>
         <p>第三方登录：</p>
-        <a href="#"><img src="Application/Home/Common/img/QQ.png" alt="qq登录" id='login-img1'></a>
-        <!--<a href="http://f.yiban.cn/iapp97545"><img src="Application/Home/Common/img/QQ.png" alt="qq登录" id='login-img1'></a>-->
-        <!--<a href="#"><img src="Application/Home/Common/img/yiban-logo.png" alt="易班登录" id='login-img2'></a>-->
+        <a href="http://localhost/coalball/login.php"><img src="Application/Home/Common/img/QQ.png" alt="qq登录" id='login-img1'></a>
         <a href="http://f.yiban.cn/iapp97545"><img src="Application/Home/Common/img/yiban-logo.png" alt="易班登录" id='login-img2'></a>
       </div>
     </div>
   <!-- 登录弹出层结束 -->
 
 <script  src="Application/Home/Common/js/ds.js"></script>
-<!-- <script src='Application/Home/Common/js/jquery-3.1.1.js'></script> -->
 <script src='Application/Home/Common/js/jquery-3.1.1.js'></script>
 <script src='Application/Home/Common/js/jquery.cookie.js'></script>
 <script type= "application/javascript">
@@ -423,15 +411,7 @@ function getObjectURL(file) {
 	return url;
 }
 
-//$("form").submit(function(e){
-//
-//if($('#upload-content').val()==''||$('#upload-headline').val()=='')
-//   {e.preventDefault();}
-//if(!$('button').is('.selected'))
-//   {e.preventDefault();}
-//if($('#day-num').val()<0)
-//   {e.preventDefault();}
-//   });
+
    var str1;
    var str2;
 $('#refresh').click(function(){
