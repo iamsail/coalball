@@ -3,9 +3,7 @@
     background:#f2f2f2;
     overflow-y: scroll;
    }
-#user-id{
-  display:none;
-}
+
 /*个人详情页css开始*/
 
 #middle-detail {
@@ -643,8 +641,7 @@ border-radius:0.2rem;
   left:11.431rem;
 }
 .head{
-  cursor:pointer;
-  width:0.489rem;
+    width:0.489rem;
   height:0.489rem;
   margin:0.096rem 0.094rem 0.096rem 0.414rem;
 }

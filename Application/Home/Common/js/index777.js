@@ -18,8 +18,8 @@ var jsonStudy = [],
     jsonOther = [];
 $.ajax({
     type: "GET",
-    //url: "http://localhost/coalball/Home/Index/test",
-    url: "Home/Index/test",
+    url: "http://localhost/coalball/Home/Index/test",
+    //url: "Home/Index/test",
     dataType: "json",
     success: function success(data) {
         message = data;
@@ -128,18 +128,13 @@ function lazyload() {
         var seeHeight = $(window).height();
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         if ($('section:last').offset().top < seeHeight + scrollTop && down) {
-
             if (need == 0 && off2) {
                 var i = num1-1;
                 if (num1 <= message.length) {
                     $('#middle-show').append("<section class='needData data'><div class='leftData'><span class='dataSort'></span><span class='dataHeadline'></span><p class='dataBody'></p><span class='time timeStart'></span><span class='time timeStop'></span></div><img class='img img1' ><img class='img img2' ></section>");
                 }
-
-                //$('.dataSort').eq(num1).html(HtmlEncode(message[i].cate + ':'));
-                message[i].cate
                 $('.dataSort').eq(num1).html(HtmlEncode(message[i].cate + ':'));
                 $('.dataHeadline').eq(num1).html(HtmlEncode(message[i].title));
-
                 $('.dataBody').eq(num1).html(HtmlEncode(message[i].content));
                 $('.timeStart').eq(num1).html(HtmlEncode('发布时间：' + message[i].update_time));
                 $('.timeStop').eq(num1).html(HtmlEncode('截止时间:' + message[i].overtime));
@@ -656,12 +651,10 @@ if ($("html").width() <= 479) {
 }
 var off = true;
 $('#publish').click(function () {
-    if($('.head').length!=0){
-        if($("#middle-upload").attr("display")=='none'){
+	if($("#middle-upload").attr("display")=='none'){
         off = true;
-    }
+	}
     if (off) {
-        $('#upload-userid').val($('#user-id').html());
         if ($(document.body).outerWidth(true) < 479) {
             $('#right-state').css('display', 'none');
             $('#left-bar').css('display', 'none');
@@ -671,9 +664,11 @@ $('#publish').click(function () {
             $('#need-select').css('display', 'block');
             $('#back-top').css("display",'none');
         }
+        // $('#middle-show').css('display', 'none');
         $('#middle-show').fadeOut();
         $('#middle-headline').css('display', 'none');
         $('#detail-page').remove();
+        // $('#middle-upload').css('display', 'block');
         $('#middle-upload').fadeIn();
 
         off = false;
@@ -686,14 +681,12 @@ $('#publish').click(function () {
         $('#detail-page').remove();
         $('#middle-upload').fadeOut();
         $('#middle-show').fadeIn();
+
+        // $('#middle-upload').css('display', 'none');
+        // $('#middle-show').css('display', 'block');
         $('#need-select').css('display', 'none');
         off = true;
     }
-
-    }else{
-        alert('请先登录');
-    }
-	
 });
 $('#triangle').click(function () {
     if ($(document.body).outerWidth(true) < 479) {
@@ -846,10 +839,6 @@ $('#need-select').change(function(){
 
 //提交格式的验证
 $("form").submit(function(e){
-    if($('.head').length==0){
-        console.log('未登录');
-        e.preventDefault();
-    }
     if($('#upload-headline').val()==''){
         console.log('未输入标题');
         e.preventDefault();
@@ -1081,29 +1070,6 @@ function pageInfo(ev){
     var off1 =true;
     var publishNum=0;
     $('.head').click(function(){
-     var userId = $('#user-id').html();
-        //ajax获取用户的发布条数及信息
-        $.ajax({
-    type: "GET",
-    url: "Home/Index/userInfo",
-    data：{userid:userId}
-    dataType: "json",
-    success: function success(data) {
-        userInfo = data;
-        for (var i = 0; i < userInfo.length; i++) {
-            $('#user-publish').append("<div class='publish-data'><span class='publish-headline'></span><span class='publish-start'></span><span class='publish-stop'></span><input class='publish-alter' type='button' value='修改'><input class='publish-remove' type='button' value='删除'></div>");
-            $('.publish-headline').eq(i).html(HtmlEncode(userInfo[i].cate + ':'+userInfo[i].title));
-            $('.publish-start').eq(i).html(HtmlEncode('发布时间:' + userInfo[i].update_time));
-            $('.publish-stop').eq(i).html(HtmlEncode('截止时间:' + userInfo[i].overtime));
-        }
-
-    },
-    error: function error(jqXHR) {
-        alert("发生错误:" + jqXHR.status);
-    }
-});
-        //ajax获取用户的发布条数及信息结束
-
         off1 =false;
        $('#middle-detail').css('display','block');
        $('#middle-show').css("display",'none');
@@ -1145,4 +1111,3 @@ function pageInfo(ev){
     $('#user-sign').blur(function(){
            $('#user-sign').attr('disabled','disabled');  
     });
-

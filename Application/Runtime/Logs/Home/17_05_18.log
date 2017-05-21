@@ -1,0 +1,108 @@
+[ 2017-05-18T21:16:33+08:00 ] ::1 /coalball/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001287s ]
+SQL: SHOW COLUMNS FROM `cl_client` [ RunTime:0.2674s ]
+NOTIC: [8] Use of undefined constant headimg - assumed 'headimg' D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 11 行.
+SQL: SELECT `uid`,`username` FROM `cl_client`  [ RunTime:0.0820s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.006710s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006933s ]
+NOTIC: [8] Undefined index: img D:\wojiu\xiangmu\wamp\www\coalball\Application\Runtime\Cache\Home\f324508a16a2d221eb71b92d9fd560ca.php 第 235 行.
+NOTIC: [8] Undefined index: name D:\wojiu\xiangmu\wamp\www\coalball\Application\Runtime\Cache\Home\f324508a16a2d221eb71b92d9fd560ca.php 第 238 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000856s ]
+NOTIC: [8] Undefined variable: testJson D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 14 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002519s ]
+
+[ 2017-05-18T21:23:17+08:00 ] ::1 /coalball/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
+SQL: SHOW COLUMNS FROM `cl_client` [ RunTime:0.0122s ]
+NOTIC: [8] Use of undefined constant headimg - assumed 'headimg' D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 11 行.
+SQL: SELECT `uid`,`username` FROM `cl_client`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] Undefined index: img D:\wojiu\xiangmu\wamp\www\coalball\Application\Runtime\Cache\Home\f324508a16a2d221eb71b92d9fd560ca.php 第 235 行.
+NOTIC: [8] Undefined index: name D:\wojiu\xiangmu\wamp\www\coalball\Application\Runtime\Cache\Home\f324508a16a2d221eb71b92d9fd560ca.php 第 238 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001195s ]
+NOTIC: [8] Undefined variable: testJson D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 14 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001998s ]
+
+[ 2017-05-18T21:24:19+08:00 ] ::1 /coalball/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+SQL: SHOW COLUMNS FROM `cl_client` [ RunTime:0.0171s ]
+NOTIC: [8] Use of undefined constant headimg - assumed 'headimg' D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 11 行.
+SQL: SELECT `uid`,`username` FROM `cl_client`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+NOTIC: [8] Undefined index: img D:\wojiu\xiangmu\wamp\www\coalball\Application\Runtime\Cache\Home\f324508a16a2d221eb71b92d9fd560ca.php 第 235 行.
+NOTIC: [8] Undefined index: name D:\wojiu\xiangmu\wamp\www\coalball\Application\Runtime\Cache\Home\f324508a16a2d221eb71b92d9fd560ca.php 第 238 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000832s ]
+NOTIC: [8] Undefined variable: testJson D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 14 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001801s ]
+
+[ 2017-05-18T21:24:28+08:00 ] ::1 /coalball/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001332s ]
+SQL: SHOW COLUMNS FROM `cl_client` [ RunTime:0.0815s ]
+NOTIC: [8] Use of undefined constant headimg - assumed 'headimg' D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 11 行.
+SQL: SELECT `uid`,`username` FROM `cl_client`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000466s ]
+NOTIC: [8] Undefined index: img D:\wojiu\xiangmu\wamp\www\coalball\Application\Runtime\Cache\Home\f324508a16a2d221eb71b92d9fd560ca.php 第 235 行.
+NOTIC: [8] Undefined index: name D:\wojiu\xiangmu\wamp\www\coalball\Application\Runtime\Cache\Home\f324508a16a2d221eb71b92d9fd560ca.php 第 238 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076857s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002304s ]
+NOTIC: [8] Undefined variable: testJson D:\wojiu\xiangmu\wamp\www\coalball\Application\Home\Controller\IndexController.class.php 第 14 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003076s ]
+

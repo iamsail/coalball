@@ -1081,29 +1081,6 @@ function pageInfo(ev){
     var off1 =true;
     var publishNum=0;
     $('.head').click(function(){
-     var userId = $('#user-id').html();
-        //ajax获取用户的发布条数及信息
-        $.ajax({
-    type: "GET",
-    url: "Home/Index/userInfo",
-    data：{userid:userId}
-    dataType: "json",
-    success: function success(data) {
-        userInfo = data;
-        for (var i = 0; i < userInfo.length; i++) {
-            $('#user-publish').append("<div class='publish-data'><span class='publish-headline'></span><span class='publish-start'></span><span class='publish-stop'></span><input class='publish-alter' type='button' value='修改'><input class='publish-remove' type='button' value='删除'></div>");
-            $('.publish-headline').eq(i).html(HtmlEncode(userInfo[i].cate + ':'+userInfo[i].title));
-            $('.publish-start').eq(i).html(HtmlEncode('发布时间:' + userInfo[i].update_time));
-            $('.publish-stop').eq(i).html(HtmlEncode('截止时间:' + userInfo[i].overtime));
-        }
-
-    },
-    error: function error(jqXHR) {
-        alert("发生错误:" + jqXHR.status);
-    }
-});
-        //ajax获取用户的发布条数及信息结束
-
         off1 =false;
        $('#middle-detail').css('display','block');
        $('#middle-show').css("display",'none');
@@ -1146,3 +1123,4 @@ function pageInfo(ev){
            $('#user-sign').attr('disabled','disabled');  
     });
 
+    // 登录状态验证

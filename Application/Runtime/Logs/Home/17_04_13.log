@@ -1,0 +1,116 @@
+[ 2017-04-13T18:22:32+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003044s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0281s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001136s ]
+
+[ 2017-04-13T18:23:05+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003355s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0311s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001983s ]
+
+[ 2017-04-13T18:23:10+08:00 ] ::1 /coalball/Home/Index/tes
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002102s ]
+ERR: 非法操作:tes
+
+[ 2017-04-13T18:43:27+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002044s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0547s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001731s ]
+
+[ 2017-04-13T19:29:52+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001551s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0356s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001795s ]
+
+[ 2017-04-13T21:48:48+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001652s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0175s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001720s ]
+
+[ 2017-04-13T21:48:54+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003174s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0183s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001931s ]
+
+[ 2017-04-13T21:48:58+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002625s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0167s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001942s ]
+
+[ 2017-04-13T21:48:59+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003654s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0595s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002129s ]
+
+[ 2017-04-13T21:48:59+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003651s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0332s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002443s ]
+
+[ 2017-04-13T21:49:00+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004105s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001771s ]
+
+[ 2017-04-13T21:49:03+08:00 ] ::1 /coalball/Home/Index/test
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001727s ]
+SQL: SHOW COLUMNS FROM `cl_xq` [ RunTime:0.0246s ]
+SQL: SELECT * FROM `cl_xq` ORDER BY id desc  [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002367s ]
+

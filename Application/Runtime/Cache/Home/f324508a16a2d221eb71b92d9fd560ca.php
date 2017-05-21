@@ -30,7 +30,8 @@
 
 </head>
 <body>
-	<!-- 左边信息栏开始 -->
+<div id='back-top'>^</div>
+<!-- 左边信息栏开始 -->
 	<header id='left-bar'>
 		<img id='coal' src="Application/Home/Common/img/资源 5.png">
 		<div id='left-text'>
@@ -84,6 +85,7 @@
             <hr class="upload-hr2">
      		<span id='chacter-time'>持续时间：</span><input id='day-num' class='upload-text' type="text" name="timeLength">
      		<span id='chacter-day'>天</span><br>
+              <input id='upload-userid' type="hidden" name="userid">
      		<hr class="upload-hr3">
      		<span id='chacter-describe'><i>*</i>描述：</span><textarea id='upload-content' name="content" placeholder="这里输入内容，不要忘记留下联系方式，最多666字哦~"></textarea><br>
      		<hr class="upload-hr4">
@@ -121,7 +123,7 @@
 
 	   <div id='middle-show'>
 
-   <section class='data'>
+   <section class='data needData'>
          <div class='leftData'>
             <span class='dataSort'></span>
             <span class='dataHeadline'></span>
@@ -132,7 +134,7 @@
          <img class='img img1' src=''>
          <img class='img img2' src=''>
    </section>
-          <section class='data'>
+   <section class='data needData'>
          <div class='leftData'>
             <span class='dataSort'></span>
             <span class='dataHeadline'></span>
@@ -143,7 +145,7 @@
          <img class='img img1' src=''>
          <img class='img img2' src=''>
    </section>
-          <section class='data'>
+   <section class='data needData'>
          <div class='leftData'>
             <span class='dataSort'></span>
             <span class='dataHeadline'></span>
@@ -154,7 +156,7 @@
          <img class='img img1' src=''>
          <img class='img img2' src=''>
    </section>
-          <section class='data'>
+   <section class='data needData'>
          <div class='leftData'>
             <span class='dataSort'></span>
             <span class='dataHeadline'></span>
@@ -165,7 +167,7 @@
          <img class='img img1' src=''>
          <img class='img img2' src=''>
    </section>
-          <section class='data'>
+   <section class='data needData'>
          <div class='leftData'>
             <span class='dataSort'></span>
             <span class='dataHeadline'></span>
@@ -182,6 +184,35 @@
 
 
 	   </div>
+     <!-- 个人详情页 -->
+     <div id='middle-detail'>
+     <div id='detail-header'><a href="#" id='detail-back'><</a>个人页</div>
+       <div id='user-data'>
+         <div id='user-head'><img id='user-headimg' src="Application/Home/Common/img/lol1.png" alt="用户头像"></div>
+         <span id='user-name'>Simple</span>
+         <input type="text" id='user-sign' value='吊二郎的小用户' disabled="disabled">
+         <input id='user-changedata' type="button" value="修改">
+         <div id='user-cancel'>注销</div>
+       </div>
+
+       <div id='user-publish'>
+       <div id='publish-info'>
+         <div id='publish-header'>发布</div>
+         <div id='publish-num'></div>
+       </div>
+         
+        <!--  <div class='publish-data'>
+           <span class='publish-headline'></span>
+           <span class='publish-start'></span>
+           <span class='publish-stop'></span>
+           <input class='publish-alter' type='button' value='修改'>
+           <input class='publish-remove' type='button' value='删除'>
+         </div> -->
+ 
+
+       </div>
+     </div>
+     
    </article>
 	<!-- 中间浏览区结束 -->
 
@@ -190,14 +221,17 @@
 
 	   <!--img存在一定处于登录状态-->
 	   <?php if(null != $_SESSION['img']): echo "<img class='head' src=". $_SESSION['img'].">" ?>
-		   <?php else: ?>
-		   <img class='head' src="Application/Home/Common/img/资源 1.png"><?php endif; ?>
+		   <?php else: endif; ?>
 
-	   <?php if(null != $_SESSION['name']): ?><span class='login-state'><?php echo $_SESSION['name'] ?>
+	   <?php if(null != $_SESSION['name']): ?><!--<span class='login-state'><?php echo $_SESSION['name'] ?>-->
+		   <span class='login-state'><?php echo $_SESSION['name'] ?>
+
 			   <div class='btnGroup1' id='logout'><a href="Home/Index/logout">注销</a></div>
 		   <?php else: ?>
 			   <!--<span class='login-state'>没有登录</span>-->
 			   <div class='btnGroup1' id='login'>登录</div><?php endif; ?>
+       
+       <span id='user-id'><?php echo $_SESSION['usrid'] ?></span>
 
 	<div  name="dashmain" id="dash-main-id-87903d" class="dash-main-4 87903d-2"  ></div>
   <div class='btnGroup1' id='pay'>打赏</div>
@@ -242,13 +276,10 @@
       </div>
     </div>
   <!-- 登录弹出层结束 -->
-
 <script src='Application/Home/Common/js/jquery-3.1.1.js'></script>
 <script src='Application/Home/Common/js/index.js'></script>
 <script  src="Application/Home/Common/js/ds.js"></script>
 <script src='Application/Home/Common/js/jquery.cookie.js'></script>
-	<script>
-//		alert(3);
-	</script>
+
 </body>
 </html>

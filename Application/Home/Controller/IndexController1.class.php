@@ -8,13 +8,10 @@ import("PHPMailer.PHPMailerAutoload");
 class IndexController extends Controller {
     public function index(){
         $client = M('client');
-//===========================待删除============================
-//        $headImgUrl = $client ->field(headimg,uid)->select();
-//        $this->assign('headImgUrl',$headImgUrl );
-//        echo $testJson;
-//===========================待删除============================
+        $headImgUrl = $client ->field(headimg,uid)->select();
+        $this->assign('headImgUrl',$headImgUrl );
         $this->display('/index');
-
+        echo $testJson;
     }
 
     //发布需求的图片上传
@@ -39,15 +36,12 @@ class IndexController extends Controller {
              'savename1' => $info['1']['savename'],
              'path1' => $info['1']['savepath'],
              'cate' =>  $_POST['cate'],
-             'overtime' => date('Y-m-d',time() + 3600*24*$timeLength),
-//==========================存放用户id==================
-             'userid' => $_POST['userid']
-//==========================存放用户id=================
+             'overtime' => date('Y-m-d',time() + 3600*24*$timeLength)
             );
             $right = $model->add($data);
             if($right){
                 $this->success('发布成功');
-		        var_dump($info['0']['savename']);
+                var_dump($info['0']['savename']);
                 var_dump($info['0']['savepath']);
                 var_dump($info['1']['savename']);
                 var_dump($info['1']['savename']);
@@ -57,7 +51,6 @@ class IndexController extends Controller {
         }else{
             $this->error('提交失败');
         }
-        return $_POST['userid'];
     }
 
     //注销
@@ -71,9 +64,17 @@ class IndexController extends Controller {
     //返回需求json
     public function test(){
         $xq = M('xq');
+
+
+//        $xqinfo = $xq ->order('id desc')->select();
+//        $testJson = JSON_encode($xqinfo);
+
         $xqinfo = $xq ->order('id desc')->select();
+//        $htmlXqinfo = htmlentities($xqinfo);
         $testJson = JSON_encode($xqinfo);
         echo $testJson;
+
+//        echo htmlentities($testJson);
     }
 
     //用户注册
@@ -113,21 +114,8 @@ class IndexController extends Controller {
         }
     }
 
+    public  function deleteUserMessage(){
 
-    //处理用户详情页的ajax,调用userMessageList函数
-    public function userInfo(){
-        if ($_SERVER["REQUEST_METHOD"] == "GET") {
-            userMessageList($_GET['userid']);
-        }
-    }
-
-    //展示用户发布的消息
-    public function userMessageList($idOfUser){
-        $xq = M('xq');
-        $conditions['userid'] = $idOfUser;
-        $userMessages = $xq ->where($conditions)->field(array('title','update_time','contet','overtime','path0','savename0','cate','path1','savename1'))->select();
-        $userMessagesJson = JSON_encode($userMessages);
-        echo $userMessagesJson;
     }
 
 

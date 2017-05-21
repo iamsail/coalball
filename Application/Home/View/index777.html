@@ -85,7 +85,7 @@
             <hr class="upload-hr2">
      		<span id='chacter-time'>持续时间：</span><input id='day-num' class='upload-text' type="text" name="timeLength">
      		<span id='chacter-day'>天</span><br>
-              <input id='upload-userid' type="hidden" name="userid">
+              <input type="hidden">
      		<hr class="upload-hr3">
      		<span id='chacter-describe'><i>*</i>描述：</span><textarea id='upload-content' name="content" placeholder="这里输入内容，不要忘记留下联系方式，最多666字哦~"></textarea><br>
      		<hr class="upload-hr4">
@@ -201,14 +201,27 @@
          <div id='publish-num'></div>
        </div>
          
-        <!--  <div class='publish-data'>
-           <span class='publish-headline'></span>
-           <span class='publish-start'></span>
-           <span class='publish-stop'></span>
-           <input class='publish-alter' type='button' value='修改'>
-           <input class='publish-remove' type='button' value='删除'>
-         </div> -->
- 
+         <div class='publish-data'>
+           <span class='publish-headline'>组队:找一个参加全国大学生英雄联盟联赛的队友找一个参加全国大学生英雄联盟联赛的队友找一个参加全国大学生英雄联盟联赛的队友找一个参加全国大学生英雄联盟联赛的队友</span>
+           <span class='publish-start'>开始时间2017.1.18</span>
+           <span class='publish-stop'>截止时间2017.2.17</span>
+           <input class='publish-alter' type="button" value='修改'>
+           <input class='publish-remove' type="button" value='删除'>
+         </div>
+         <div class='publish-data'>
+           <span class='publish-headline'>组队:找一个参加全国大学生英雄联盟联赛的队友</span>
+           <span class='publish-start'>开始时间2017.1.18</span>
+           <span class='publish-stop'>截止时间2017.2.17</span>
+           <input class='publish-alter' type="button" value='修改'>
+           <input class='publish-remove' type="button" value='删除'>
+         </div>
+         <div class='publish-data'>
+           <span class='publish-headline'>组队:找一个参加全国大学生英雄联盟联赛的队友找一个参加全国大学生英雄联盟联赛的队友找一个参加全国大学生英雄联盟联赛的队友找一个参加全国大学生英雄联盟联赛的队友</span>
+           <span class='publish-start'>开始时间2017.1.18</span>
+           <span class='publish-stop'>截止时间2017.2.17</span>
+           <input class='publish-alter' type="button" value='修改'>
+           <input class='publish-remove' type="button" value='删除'>
+         </div>
 
        </div>
      </div>
@@ -235,7 +248,7 @@
 			   <div class='btnGroup1' id='login'>登录</div>
 	   </if>
        
-       <span id='user-id'><php>echo $_SESSION['usrid']</php></span>
+       <span><php>echo $_SESSION['usrid']</php></span>
 
 	<div  name="dashmain" id="dash-main-id-87903d" class="dash-main-4 87903d-2"  ></div>
   <div class='btnGroup1' id='pay'>打赏</div>
@@ -280,6 +293,7 @@
       </div>
     </div>
   <!-- 登录弹出层结束 -->
+
 <script src='Application/Home/Common/js/jquery-3.1.1.js'></script>
 <script src='Application/Home/Common/js/index.js'></script>
 <script  src="Application/Home/Common/js/ds.js"></script>

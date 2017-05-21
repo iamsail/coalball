@@ -44,8 +44,8 @@ if(!$num){
 <div>
     <h3>
         登录成功
-        <?php echo var_dump($uinfo); ?>
-        <?php echo var_dump($uinfo["nickname"]); ?>
+<!--        --><?php //echo var_dump($uinfo); ?>
+<!--        --><?php //echo var_dump($uinfo["nickname"]); ?>
     </h3>
 </div>
 
